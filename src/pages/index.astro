@@ -2,43 +2,278 @@
 
 ---
 
+<!-- Main HTML document -->
 <html lang="en">
+
+	<!-- Stuff for browser/settings/tab title -->
 	<head>
+
+		<!-- Character encoding -->
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+
+		<!-- Makes site scale properly on phones -->
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+
+		<!-- Browser tab title -->
 		<title>Dead Inside Designs</title>
+
 	</head>
+
+
+	<!-- Main visible page -->
 	<body style="
-	font-family: Arial, sans-serif;
-	max-width: 700px;
-	margin: 40px auto;
-	line-height: 1.6;
-	background-color: #cfd8e3;
-	color: #1f2933;
-	padding: 30px;
-">
 
-	<h1 style="color: #3b4f63;">Dead Inside Designs</h1>
+		/* Main font */
+		font-family: Arial, sans-serif;
 
-	<p><i>Hold my beer. *goes to therapy*</i></p>
+		/* Maximum page width */
+		max-width: 1000px;
 
-	<p>
-		This page contains designs that shouldn't be taken too seriously.<br>
-		You're free to download, use, modify.<br>
-		Credit is nice. Donations too.
-	</p>
+		/* Centers page horizontally */
+		margin: 40px auto;
 
-	<hr>
+		/* Space between text lines */
+		line-height: 1.6;
 
-	<h2 style="color: #3b4f63; margin-top: 40px;">
-	Designs (cuming soon)
-	
-	</h2>
+		/* Background color */
+		background-color: #cfd8e3;
 
-	<p>Stay tuned. Or don’t. It’s fine.</p>
+		/* Main text color */
+		color: #1f2933;
+
+		/* Space inside page edges */
+		padding: 30px;
+
+	">
+
+
+		<!-- TOP HEADER / NAVIGATION BAR -->
+		<header style="
+
+			/* Allows absolute positioning inside */
+			position: relative;
+
+			/* Header height */
+			height: 50px;
+
+			/* Space below header */
+			padding-bottom: 20px;
+
+			/* Distance to content below */
+			margin-bottom: 40px;
+
+			/* Horizontal separator line */
+			border-bottom: 1px solid #7f8c9a;
+
+		">
+
+
+			<!-- Navigation section -->
+			<nav style="
+
+				/* Lock position inside header */
+				position: absolute;
+
+				/* Move to left edge */
+				left: 0;
+
+				/* Vertical center */
+				top: 50%;
+
+				/* Perfect vertical alignment */
+				transform: translateY(-50%);
+
+			">
+
+
+				<!-- Home button -->
+				<a href="/" style="
+
+					/* Remove underline */
+					text-decoration: none;
+
+					/* Text color */
+					color: #3b4f63;
+
+					/* Bold text */
+					font-weight: bold;
+
+					/* Space inside button */
+					padding: 10px 15px;
+
+					/* Button border */
+					border: 1px solid #7f8c9a;
+
+					/* Rounded corners */
+					border-radius: 8px;
+
+				">
+
+					Home
+
+				</a>
+
+			</nav>
+
+
+			<!-- Main centered title -->
+			<div style="
+
+				/* Center text */
+				text-align: center;
+
+				/* Text size */
+				font-size: 28px;
+
+				/* Bold text */
+				font-weight: bold;
+
+				/* Text color */
+				color: #3b4f63;
+
+				/* Vertical alignment */
+				line-height: 50px;
+
+			">
+
+				Dead Inside Designs
+
+			</div>
+
+		</header>
+
+
+
+		<!-- Main page content -->
+		<main>
+
+
+			<!-- Intro section -->
+			<section style="margin-bottom: 40px;">
+
+				<p>
+					This page contains designs that shouldn't be taken too seriously.<br>
+					You're free to download, use, modify.<br>
+					Credit is nice. Donations too.
+				</p>
+
+				<p>
+					<i>Hold my beer. *goes to therapy*</i>
+				</p>
+
+			</section>
+
+
+
+			<!-- Horizontal separator -->
+			<hr style="
+
+				border: none;
+				border-top: 1px solid #7f8c9a;
+				margin: 35px 0;
+
+			">
+
+
+
+			<!-- Designs section -->
+			<section>
+
+				<h2 style="color: #3b4f63;">
+
+					Designs
+
+				</h2>
+
+
+
+				<!-- GRID CONTAINER -->
+				<div style="
+
+					/* Grid layout */
+					display: grid;
+
+					/* Auto-create columns */
+					grid-template-columns: repeat(auto-fill, minmax(260px, 320px));
+
+					/* Space between tiles */
+					gap: 25px;
+
+					/* Space above grid */
+					margin-top: 30px;
+
+				">
+
+
+
+					<!-- SINGLE DESIGN TILE -->
+					<a href="/designs/live-love-leopard" style="
+
+						/* Remove underline */
+						text-decoration: none;
+
+						/* Text color */
+						color: #1f2933;
+
+						/* Border */
+						border: 1px solid #7f8c9a;
+
+						/* Rounded corners */
+						border-radius: 12px;
+
+						/* Space inside tile */
+						padding: 15px;
+
+						/* Tile background */
+						background-color: #dbe3ec;
+
+					">
+
+
+						<!-- Preview image -->
+						<img 
+							src="/designs/liveLoveLeopard.png"
+							alt="Live Love Leopard"
+
+							style="
+
+								/* Fill tile width */
+								width: 100%;
+
+								/* Rounded image corners */
+								border-radius: 8px;
+
+								/* Prevent weird inline spacing */
+								display: block;
+
+							"
+						>
+
+
+						<!-- Design title -->
+						<h3 style="color: #3b4f63;">
+
+							Live Love Leopard
+
+						</h3>
+
+
+						<!-- Small description -->
+						
+						<!-- Hidden category -->
+						<!-- Hidden category -->
+						<p style="display: none;">
+							Poster / design
+						</p>
+
+					</a>
+
+				</div>
+
+			</section>
+
+		</main>
 
 	</body>
+
 </html>
